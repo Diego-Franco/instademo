@@ -58,8 +58,8 @@ public class RInstaAdapter extends RealmBaseAdapter<InstaModel> {
                 holder.carName.setText(model.getStyle().getName());
             }
         }
-        if(model.getDesc() != null) {
-            holder.carDesc.setText(model.getDesc());
+        if(model.getAddress() != null) {
+            holder.carDesc.setText(model.getAddress().getCity() + " " + model.getAddress().getState() + " " + model.getAddress().getZipcode());
         }
 
 

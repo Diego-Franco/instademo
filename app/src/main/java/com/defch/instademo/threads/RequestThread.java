@@ -2,6 +2,7 @@ package com.defch.instademo.threads;
 
 import android.content.Context;
 import android.os.Message;
+import android.util.Log;
 
 import com.defch.instademo.hdlr.CompleteHandler;
 import com.defch.instademo.hdlr.InitHandler;
@@ -85,6 +86,7 @@ public class RequestThread implements Runnable {
 
                     JSONArray jsonA = new JSONArray(responseString);
                     for(int i = 0; i < jsonA.length() - 1730; i++){
+                        Log.i("Thread", "vehicles: " + (jsonA.length() - 1730));
                         JSONObject json = jsonA.getJSONObject(i);
 
                         InstaModel realmModel = realm.where(InstaModel.class).equalTo("id", json.getString("id")).findFirst();

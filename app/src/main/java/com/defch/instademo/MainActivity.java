@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity implements StartIfaceListene
     Toolbar toolbar;
 
     private Realm realm;
-    private long finishTime = 5;
+    private long finishTime = 2;
     RInstaAdapter adapter;
     InitHandler initHandler;
     CompleteHandler completeHandler;
